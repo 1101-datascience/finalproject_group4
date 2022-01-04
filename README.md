@@ -1,11 +1,11 @@
-# [GroupID] Title of your final project
+# [GroupID] Bankrutcy Prediciton
 
 ### Groups
-* name, student ID1
-* name, student ID2
-* name, student ID3
-* ...
-
+* 鄭宇傑, 108703014
+* 賴冠瑜, 108703019
+* 張瀚文, 108304003
+* 江宗樺, 108703029
+* 田詠恩, 108703030
 ### Goal
 A breif introduction about your project, i.e., what is your goal?
 
