@@ -1,20 +1,3 @@
----
-marp: true
-title: 1101-DataScience-Final-Presentation-Group4
-date: 2022-01-13
-paginate: true
----
-
-<style>
-img[alt~="center"] {
-  display: block;
-  margin: 0 auto;
-}
-img[alt~="right"] {
-  display: block;
-}
-</style>
-
 # Company Bankrutcy Prediciton
 
 Data Science Final Presentation Group 4
@@ -31,14 +14,6 @@ Group4：
 108703029 江宗樺
 108703030 田詠恩
 108304003 張瀚文
-
----
-
-# Outline
-
----
-
-# 資料介紹
 
 ---
 
@@ -64,11 +39,9 @@ Group4：
 
 # 資料分析
 
----
+## Shiny App
 
-# Shiny App
-
-## ![center width:500px](../graph/shinyAppQRcode.png)
+![center width:500px](../graph/shinyAppQRcode.png)
 
 ---
 
@@ -132,14 +105,7 @@ Group4：
 | decision tree                                          | decision tree with pca                                    |
 | ------------------------------------------------------ | --------------------------------------------------------- |
 | ![ h:300px](../graph/DecisionTree-ConfusionMatrix.png) | ![h:300px](../graph/DecisionTree-PCA-ConfusionMatrix.png) |
-
----
-
-# model #1: rpart decision tree
-
-| decision tree                             | decision tree with pca                |
-| ----------------------------------------- | ------------------------------------- |
-| ![h:300px](../graph/DecisionTree-PCA.png) | ![h:300px](../graph/DecisionTree.png) |
+| ![h:300px](../graph/DecisionTree-PCA.png)              | ![h:300px](../graph/DecisionTree.png)                     |
 
 ---
 
@@ -148,14 +114,7 @@ Group4：
 | random forest                                          | decision tree with pca                                    |
 | ------------------------------------------------------ | --------------------------------------------------------- |
 | ![ h:300px](../graph/RandomForest-ConfusionMatrix.png) | ![h:300px](../graph/RandomForest-PCA-ConfusionMatrix.png) |
-
----
-
-# model #2: random forest
-
-| random forest                         | decision tree with pca                    |
-| ------------------------------------- | ----------------------------------------- |
-| ![h:300px](../graph/RandomForest.png) | ![h:300px](../graph/RandomForest-PCA.png) |
+| ![h:300px](../graph/RandomForest.png)                  | ![h:300px](../graph/RandomForest-PCA.png)                 |
 
 ---
 
@@ -164,14 +123,7 @@ Group4：
 | logistic regression                                          | logistic regression with pca                                    |
 | ------------------------------------------------------------ | --------------------------------------------------------------- |
 | ![ h:300px](../graph/LogisticRegression-ConfusionMatrix.png) | ![h:300px](../graph/LogisticRegression-PCA-ConfusionMatrix.png) |
-
----
-
-# model #3: logistic regression
-
-| logistic regression                         | logistic regression with pca                    |
-| ------------------------------------------- | ----------------------------------------------- |
-| ![h:300px](../graph/LogisticRegression.png) | ![h:300px](../graph/LogisticRegression-PCA.png) |
+| ![h:300px](../graph/LogisticRegression.png)                  | ![h:300px](../graph/LogisticRegression-PCA.png)                 |
 
 ---
 
