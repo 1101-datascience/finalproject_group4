@@ -36,19 +36,19 @@ Rscript code/your_script.R --input data/training --output results/performance.ts
 * method we use
   * decision tree
   ```console
-  
+  Rscript pcaRpart.R (max depth) (threshold)
   ```
 
     ![desision tree](./graph/decision_tree.png)
   * random forest
   ```console
-  
+  Rscript pcaRandomForest.R (tree number)
   ```
   
     ![random forest](./graph/random_forest.png)
   * logistic regression 
   ```console
-  
+  Rscript pcaGlm.R (threshold)
   ```
 
     ![logistic regression](./graph/logistic_regression.jpeg)
