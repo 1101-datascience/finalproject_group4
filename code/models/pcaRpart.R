@@ -1,8 +1,6 @@
 library('rpart')
 library('dplyr')
 
-
-
 data <- read.csv("data.csv")
 
 data <- data[sample(1:nrow(data)), ]
@@ -20,7 +18,6 @@ nrow(res[["train"]])
 nrow(res[["validate"]])
 nrow(res[["test"]])
 names(res[["test"]])
-
 
 #train pca
 in_d <- res[["train"]]
