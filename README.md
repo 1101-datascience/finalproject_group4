@@ -62,11 +62,13 @@ Rscript code/your_script.R --input data/training --output results/performance.ts
 * Which metric do you use 
   * precision, recall, R-square
 * Is your improvement significant?
-* challenge part of project
-  * unbalance of data make prediction more difficult
+
+* 較有挑戰性的部分
+  * 訓練資料中不平均（大多都沒有倒閉）
   * tuning of hyperparameters
   * testing of different epoch
   * choose between precision and recall
+
 
 ## References
 https://www.kaggle.com/jerryfang5/bankrutcy-prediciton-by-r/notebook
