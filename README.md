@@ -33,18 +33,40 @@ Rscript code/your_script.R --input data/training --output results/performance.ts
 
 ### code
 
-* Which method do you use?
-* What is a null model for comparison?
-* How do your perform evaluation? ie. cross-validation, or addtional indepedent data set
+* method we use
+  * decision tree
 
-使用 train, validation, test split，並且使用 SMOTE 製作額外的 traning data
+    ![desision tree](./graph/decision_tree.png)
+  * random forest
+
+    ![random forest](./graph/random_forest.png)
+  * logistic regression 
+
+    ![logistic regression](./graph/logistic_regression.jpeg)
+  * cnn
+
+
+* Null model predict all 1
+* data split
+
+  ![data split](./graph/data_split.png)
+
+
+* 使用 SMOTE 製作額外的 traning data
+
+  ![smote](./graph/original.png)
+  ![smot](./graph/oversample.png)
 
 ### results
 
 * Which metric do you use 
   * precision, recall, R-square
 * Is your improvement significant?
-* What is the challenge part of your project?
+* challenge part of project
+  * unbalance of data make prediction more difficult
+  * tuning of hyperparameters
+  * testing of different epoch
+  * choose between precision and recall
 
 ## References
 https://www.kaggle.com/jerryfang5/bankrutcy-prediciton-by-r/notebook
