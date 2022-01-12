@@ -45,7 +45,8 @@ Rscript code/your_script.R --input data/training --output results/performance.ts
 * Which metric do you use 
   * precision, recall, R-square
 * Is your improvement significant?
-* What is the challenge part of your project?
+* 較有挑戰性的部分
+  * 訓練資料中不平均（大多都沒有倒閉）
 
 ## References
 https://www.kaggle.com/jerryfang5/bankrutcy-prediciton-by-r/notebook
