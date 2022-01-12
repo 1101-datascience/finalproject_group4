@@ -27,10 +27,9 @@ Rscript code/your_script.R --input data/training --output results/performance.ts
 * [來源](https://www.kaggle.com/fedesoriano/company-bankruptcy-prediction)
 * [格式](https://github.com/1101-datascience/finalproject_group4/tree/main/data)
 * 預處理
-  * Handle missing data
-  * Scale value
-  * PCA?
-  * Normalize?
+  * 資料分析
+  * PCA
+  * Normalize
 
 ### code
 
