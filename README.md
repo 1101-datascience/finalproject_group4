@@ -77,7 +77,7 @@
   2. 利用k-fold validation的方法 篩選出recall最高的model
   3. 對於threshold、max depth等超參數進行調整
 
-* decision tree
+* decision tree （詳細請到code資料夾）
   ```r
   model<- rpart( Bankrupt. ~ .,
               data=res[["train"]],
@@ -100,7 +100,7 @@
 
   ![decision tree](./graph/DecisionTree-ConfusionMatrix.png)  ![decision tree](./graph/DecisionTree-PCA-ConfusionMatrix.png)
 
-* random forest
+* random forest  （詳細請到code資料夾）
 
   ```r
   g = sample(cut(
@@ -148,7 +148,7 @@
 
   ![random forest](./graph/RandomForest-ConfusionMatrix.png)  ![random forest](./graph/RandomForest-PCA-ConfusionMatrix.png)
 
-* logistic regression
+* logistic regression  （詳細請到code資料夾）
   ```r
   model <- glm(formula = Bankrupt. ~ . ,
 				 family = binomial(link='probit'),
@@ -171,7 +171,7 @@
   ```
   
   ![logistic regression](./graph/LogisticRegression-ConfusionMatrix.png)  ![logistic regression](./graph/LogisticRegression-PCA-ConfusionMatrix.png)
-* cnn 
+* cnn   （詳細請到code資料夾）
   ```python
   class BinaryClassification(nn.Module):
     def __init__(self):
@@ -210,3 +210,4 @@
 https://www.kaggle.com/jerryfang5/bankrutcy-prediciton-by-r/notebook
 https://www.kaggle.com/seongwonr/bankruptcy-prediction-with-smote
 https://colab.research.google.com/drive/12wXAyrbX8Ji5J6CNAEIQwtDOaxy8BCIO?usp=sharing
+https://towardsdatascience.com/deep-learning-using-pytorch-for-tabular-data-c68017d8b480
