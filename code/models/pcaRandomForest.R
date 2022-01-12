@@ -1,16 +1,13 @@
+library("randomForest")
 library('rpart')
 library('dplyr')
 
+#input
+args = commandArgs(trailingOnly=TRUE)
+tree <- args[1]
 
 # load data
 data <- read.csv("../../data/data.csv")
-
-#input
-args = commandArgs(trailingOnly=TRUE)
-depth <- args[1]
-threshold <- args[2]
-
-
 
 accuracy <- 0
 recall <- 0
@@ -21,11 +18,10 @@ max <- 0
 
 i <- 1
 while(i < 10){
-	# shuffle data
 	data <- data[sample(1:nrow(data)), ]
+
+	# shuffle data
 	spec = c(train = .8, validate = .2)
-  
-	
 
 	g = sample(cut(
 				   seq(nrow(data)), 
@@ -33,6 +29,7 @@ while(i < 10){
 				   labels = names(spec)
 				   ))
 
+	# final data
 	res = split(data, g)
 
 
@@ -49,29 +46,35 @@ while(i < 10){
 	prop_varex <- pr_var/sum(pr_var)
 	#plot(prop_varex, type = 'lines')
 
+
 	#--- built train data with Bankrupt and top 40 component
 	train.data <- data.frame(Bankrupt. = res[["train"]]$Bankrupt., pca$x)
-
 	train.data <- train.data[,1:41]
-	model <- rpart(Bankrupt. ~ .,data = train.data, method = "anova", control=rpart.control(maxdepth= depth),)
+	train.data.var <- colnames(train.data[,2:40])
 
-
+	#--- built val data with Bankrupt and top 40 component
 	val.data <- predict(pca, newdata = res[["validate"]]) 
 	val.data <- as.data.frame(val.data)
 	val.data <- val.data[,1:40]
 
+	# build random forest model
+	model <- randomForest(x = train.data[,train.data.var], y = as.factor(train.data$Bankrupt.),
+						  ntree = as.integer(tree),  importance = T)
+
 	val <- data.frame(truth = res[["validate"]]$Bankrupt.,
 					  prediction = predict(model, val.data))
-	val <- mutate(val, pred = ifelse(prediction > threshold, 1, 0))
+	#val <- mutate(val, result = ifelse(prediction > 0.5, 1, 0))
 
 	# confusion matrix of validation
-	cm <- table(val[,c(1,3)])
+	cm <- table(val)
 
 
 	TP <- cm[2,2]
 	TN <- cm[1,1]
 	FP <- cm[1,2]
 	FN <- cm[2,1]
+
+
 	r <- TP/(TP+FN)
 
 	if(r > max){
@@ -80,10 +83,9 @@ while(i < 10){
 		recall <- TP/(TP+FN)
 		precision <- TP/(TP+FP)
 		NegativePrecision <- TN/(TN+FN)
-
 		final_cm <- data.frame(cm)
 	}
-	i = i + 1
+	i = i +1
 }
 
 result <- c("accuracy" = accuracy,
@@ -92,8 +94,9 @@ result <- c("accuracy" = accuracy,
 			"NegativePrecision" = NegativePrecision)
 res <- as.matrix(result)
 
-dir.create("DecisionTree", recursive = TRUE ,showWarnings = FALSE)
-setwd("DecisionTree")
+
+dir.create("RandomForest", recursive = TRUE ,showWarnings = FALSE)
+setwd("RandomForest")
 
 write.csv(final_cm, file = "output.csv", quote = F, row.names = F)
 write.table(res, file = "output.csv", sep=",", quote = F, append=TRUE, col.names=FALSE, row.names = TRUE)
