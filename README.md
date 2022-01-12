@@ -29,12 +29,15 @@ Rscript code/your_script.R --input data/training --output results/performance.ts
 * 預處理
   * Handle missing data
   * Scale value
+  * PCA?
+  * Normalize?
 
 ### code
 
 * Which method do you use?
 * What is a null model for comparison?
 * How do your perform evaluation? ie. cross-validation, or addtional indepedent data set
+
 使用 train, validation, test split，並且使用 SMOTE 製作額外的 traning data
 
 ### results
