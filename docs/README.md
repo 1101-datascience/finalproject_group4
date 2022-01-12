@@ -43,43 +43,31 @@ Group4：
 
 ![center width:500px](../graph/shinyAppQRcode.png)
 
----
-
-# 相關係數
+## 相關係數
 
 該圖顯示了每個特徵對於對方的相關性。圖中 x 及 y 軸為資料的屬性，格子中的顏色越深，代表著兩屬性之間的相關性越高。
 ![width:600px bg right](../graph/corr2.png)
 
----
-
-# 相關係數
+## 相關係數
 
 該圖顯示了每個特徵對於對方的相關性。圖中 x 及 y 軸為資料的屬性，格子中的顏色越深，代表著兩屬性之間的相關性越高。
 ![width:600px bg right](../graph/corr1.png)
 
----
-
-# 主成份分析
+## 主成份分析
 
 從第一主成份(PC1)到第二主成份(PC2)可以發現沒有明顯可以分辨破產與否的成分。
 ![width:600px bg right](../graph/PC.png)
 
----
-
-# 資料解釋度
+## 資料解釋度
 
 我們可以看到大約 40 個主成份就解釋了超過 90%的差異。
 ![](../graph/var_explain.png)
 
----
-
-# 公司破產分佈
+## 公司破產分佈
 
 ![](../graph/SvB.png)
 
----
-
-# 模型評估標準
+## 模型評估標準
 
 - 95% 以上的資料中的公司都沒有破產(Bankruptcy == 0)
   所以全部猜 1 就可以有超級高的 Accuracy (NULL model)
@@ -91,34 +79,26 @@ Group4：
 
 # Models
 
----
-
-# pca 分析 -> 取前 40 個
+## pca 分析 -> 取前 40 個
 
 ![bg right width:500px](../graph/pcaRight.png)
 ![right width:500px](../graph/pcaLeft.png)
 
----
-
-# model #1: rpart decision tree
+## model #1: rpart decision tree
 
 | decision tree                                          | decision tree with pca                                    |
 | ------------------------------------------------------ | --------------------------------------------------------- |
 | ![ h:300px](../graph/DecisionTree-ConfusionMatrix.png) | ![h:300px](../graph/DecisionTree-PCA-ConfusionMatrix.png) |
 | ![h:300px](../graph/DecisionTree-PCA.png)              | ![h:300px](../graph/DecisionTree.png)                     |
 
----
-
-# model #2: random forest
+## model #2: random forest
 
 | random forest                                          | decision tree with pca                                    |
 | ------------------------------------------------------ | --------------------------------------------------------- |
 | ![ h:300px](../graph/RandomForest-ConfusionMatrix.png) | ![h:300px](../graph/RandomForest-PCA-ConfusionMatrix.png) |
 | ![h:300px](../graph/RandomForest.png)                  | ![h:300px](../graph/RandomForest-PCA.png)                 |
 
----
-
-# model #3: logistic regression
+## model #3: logistic regression
 
 | logistic regression                                          | logistic regression with pca                                    |
 | ------------------------------------------------------------ | --------------------------------------------------------------- |
@@ -129,13 +109,9 @@ Group4：
 
 # SMOTE 生成資料
 
----
-
 # Pytorch
 
----
-
-# epoch 次數比較
+## epoch 次數比較
 
 | epoch 1-10                         | epoch 10-150                         |
 | ---------------------------------- | ------------------------------------ |
