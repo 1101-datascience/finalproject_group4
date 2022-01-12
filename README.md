@@ -12,11 +12,10 @@
 我們將目標設定成要盡可能增加 recall 。嘗試預測出更多可能會倒的公司去對他們做關切 或提早做應對措施，並去檢視可能面臨的問題，是這次專題的主要目標。
 ### Demo 
 * [ShinyApp](https://yjack0000.shinyapps.io/shinyui/?_ga=2.142920117.1862022445.1641973117-1531152518.1641397296)
-You should provide an example commend to reproduce your result
+* Rscript 使用
 ```R
 Rscript code/your_script.R --input data/training --output results/performance.tsv
 ```
-* any on-line visualization
 
 ## 檔案架構及其相關資訊
 
@@ -25,9 +24,9 @@ Rscript code/your_script.R --input data/training --output results/performance.ts
 
 ### data
 
-* Source
-* Input format
-* Any preprocessing?
+* [來源](https://www.kaggle.com/fedesoriano/company-bankruptcy-prediction)
+* [格式](https://github.com/1101-datascience/finalproject_group4/tree/main/data)
+* 預處理
   * Handle missing data
   * Scale value
 
