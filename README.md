@@ -13,9 +13,9 @@
 ### Demo 
 * [ShinyApp](https://yjack0000.shinyapps.io/shinyui/?_ga=2.142920117.1862022445.1641973117-1531152518.1641397296)
 * Rscript 使用
-```R
-Rscript code/your_script.R --input data/training --output results/performance.tsv
-```
+```console
+  Rscript pcaRpart.R (max depth) (threshold)
+  ```
 
 ## 檔案架構及其相關資訊
 
@@ -28,7 +28,10 @@ Rscript code/your_script.R --input data/training --output results/performance.ts
 * [格式](https://github.com/1101-datascience/finalproject_group4/tree/main/data)
 * 預處理
   * 資料分析
+  ![Correltion](./graph/corr2.png)
   * PCA
+  ![PCA](./graph/PC.png)
+  ![Variable Explained](./graph/var_explain.png)
   * Normalize
 
 ### code
@@ -39,26 +42,26 @@ Rscript code/your_script.R --input data/training --output results/performance.ts
   Rscript pcaRpart.R (max depth) (threshold)
   ```
 
-    ![desision tree](./graph/decision_tree.png)
+    ![Desision Tree](./graph/decision_tree.png)
   * random forest
   ```console
   Rscript pcaRandomForest.R (tree number)
   ```
   
-    ![random forest](./graph/random_forest.png)
+    ![Random Forest](./graph/random_forest.png)
   * logistic regression 
   ```console
   Rscript pcaGlm.R (threshold)
   ```
 
-    ![logistic regression](./graph/logistic_regression.jpeg)
+    ![Logistic Regression](./graph/logistic_regression.jpeg)
   * cnn
 
 
 * Null model predict all 1
 * data split
 
-  ![data split](./graph/data_split.png)
+  ![Data Split](./graph/data_split.png)
 
 
 * 使用 SMOTE 製作額外的 traning data
