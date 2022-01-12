@@ -131,6 +131,16 @@ Rscript code/your_script.R --input data/training --output results/performance.ts
 
   #--- built val data with Bankrupt and top 40 component
   val.data <- predict(pca, newdata = res[["validate"]]) 
+
+  model <- randomForest(x = train.data[,train.data.var], y = as.factor(train.data$Bankrupt.),
+						  ntree = as.integer(tree),  importance = T)
+
+	val <- data.frame(truth = res[["validate"]]$Bankrupt.,
+					  prediction = predict(model, val.data))
+	#val <- mutate(val, result = ifelse(prediction > 0.5, 1, 0))
+
+	# confusion matrix of validation
+	cm <- table(val)
   ```
 
   ![random forest](./graph/RandomForest-ConfusionMatrix.png)  ![random forest](./graph/RandomForest-PCA-ConfusionMatrix.png)
