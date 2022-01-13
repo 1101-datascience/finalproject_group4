@@ -123,7 +123,7 @@ Group4：
 
 ---
 
-# model #1: rpart decision tree
+# model #1: decision tree
 
 | decision tree                                          | decision tree with pca                                    |
 | ------------------------------------------------------ | --------------------------------------------------------- |
@@ -131,7 +131,7 @@ Group4：
 
 ---
 
-# model #1: rpart decision tree
+# model #1: decision tree
 
 | decision tree                             | decision tree with pca                |
 | ----------------------------------------- | ------------------------------------- |
