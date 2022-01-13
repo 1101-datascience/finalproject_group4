@@ -1,5 +1,5 @@
 ---
-marp: true
+marp: false
 title: 1101-DataScience-Final-Presentation-Group4
 date: 2022-01-13
 paginate: true
