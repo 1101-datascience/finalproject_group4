@@ -191,10 +191,10 @@ Group4：
 
 | recall                     | 原始資料 | 透過 PCA 降維處理 |
 | -------------------------- | -------- | ----------------- |
-| Decision Tree              |          |                   |
-| Random Forest              |          |                   |
-| Logistic Regression        |          |                   |
-| Convolution Neural Network |          |                   |
+| Decision Tree              | 0.15     | 0.26              |
+| Random Forest              | 0.36     | 0.15              |
+| Logistic Regression        | 0.32     | 0.63              |
+| Convolution Neural Network | 0.78     | Yes               |
 
 ---
 
