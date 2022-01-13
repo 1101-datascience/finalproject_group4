@@ -194,7 +194,7 @@ Group4：
 | Decision Tree              | 0.15     | 0.26              |
 | Random Forest              | 0.36     | 0.15              |
 | Logistic Regression        | 0.32     | 0.63              |
-| Convolution Neural Network | 0.78     | Yes               |
+| Convolution Neural Network | 0.68     | 0.78              |
 
 ---
 
